@@ -1,6 +1,6 @@
 # ckmeans
 
-A javascript implementation of the [ckmeans][https://cran.r-project.org/web/packages/Ckmeans.1d.dp/index.html] algorithm. It's effectively a 1-dimensional version of kmeans, where a set of values are clustered into discrete groups. The algorithm has an `O(kn log(n))` runtime.
+A javascript implementation of the [ckmeans](https://cran.r-project.org/web/packages/Ckmeans.1d.dp/index.html) algorithm. It's effectively a 1-dimensional version of kmeans, where a set of values are clustered into discrete groups. The algorithm has an `O(kn log(n))` runtime.
 
 For an alternative API used commonly in data visualization applications, check out [d3-scale-cluster](https://github.com/schnerd/d3-scale-cluster).
 
