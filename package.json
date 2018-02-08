@@ -1,6 +1,6 @@
 {
   "name": "ckmeans",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Ckmeans Javascript Implementation - Fast Univariate Clustering",
   "repository": "schnerd/ckmeans",
   "main": "src/index.js",
