@@ -105,8 +105,8 @@ void fillMatrixColumn(size_t imin, size_t imax, size_t column, size_t nColumns, 
 
 void fillMatrices (double data[], size_t nValues, double matrix[], size_t backtrackMatrix [], size_t nColumns) {
     size_t nRows = nValues;
-    double sumX[nValues];
-    double sumXsq[nValues];
+    double * sumX = malloc(nValues* sizeof(double));
+    double * sumXsq = malloc(nValues* sizeof(double));
     // we shift wrt to the median for numerical stability.
     double shift = data[nValues / 2];
 
@@ -130,10 +130,10 @@ void fillMatrices (double data[], size_t nValues, double matrix[], size_t backtr
     }
     fillMatrixColumn(nValues - 1, nValues - 1, nColumns - 1, nColumns, nRows, matrix, backtrackMatrix, sumX, sumXsq);
 
-
-
-
+  free(sumX);
+  free(sumXsq);
 }
+
 void ckmeans (double data[],size_t nValues, double output[], size_t nClusters) {
     qsort(data, nValues, sizeof *data, &compare_doubles);
     // we'll use as a maximum number of clusters
