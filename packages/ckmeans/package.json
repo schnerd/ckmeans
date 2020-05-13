@@ -9,7 +9,7 @@
   "module": "dist/ckmeans.esm.js",
   "browser": "dist/ckmeans.umd.js",
   "scripts": {
-    "test": "npm run lint && yarn jest",
+    "test": "yarn lint && yarn jest",
     "lint": "eslint src",
     "build": "rollup -c"
   },
