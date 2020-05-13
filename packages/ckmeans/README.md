@@ -2,6 +2,8 @@
 
 A javascript implementation of the [ckmeans](https://cran.r-project.org/web/packages/Ckmeans.1d.dp/index.html) algorithm. It's effectively a 1-dimensional version of kmeans, where a set of values are clustered into discrete groups. The algorithm has an `O(kn log(n))` runtime.
 
+There is also a native version of this package if you need faster performance in node environments, see [ckmeans-native](https://www.npmjs.com/package/ckmeans-native)
+
 For an alternative API used commonly in data visualization applications, check out [d3-scale-cluster](https://github.com/schnerd/d3-scale-cluster).
 
 ### Getting Started
@@ -42,15 +44,14 @@ Thanks to Haizhou Wang and Mingzhou Song for developing the original [Ckmeans 1D
 ### Contributing
 
 ```
-npm install
-npm run test  # run tests
-npm run test-node-modern  # run tests (with ckmeans native)
-npm run build # build distributable file for browser
+yarn
+yarn test  # run tests
+yarn build # build distributable files
 ```
 
 ### Publishing
 
-1. Build distributable file for browser: `npm run build`
+1. Build distributable file for browser: `yarn build`
 2. Update CHANGELOG.md with changes in next version bump
 3. Create new npm version: `npm version [major|minor|patch]`
 4. Push to github with new version tag: `git push origin --tags`
