@@ -3,4 +3,5 @@ npm-debug.log
 .idea
 .DS_Store
 dist
+build
 yarn-error.log

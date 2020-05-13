@@ -28,5 +28,9 @@
     "jest": "^26.0.1",
     "prettier": "^2.0.5",
     "rollup": "^2.9.1"
-  }
+  },
+  "files": [
+    "dist",
+    "yarn.lock"
+  ]
 }
