@@ -26,6 +26,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
         
     - run: cd packages/ckmeans
-    - run: yarn install
-    - run: yarn run build --if-present
+    - run: yarn
+    - run: yarn build
     - run: yarn test
