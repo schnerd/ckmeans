@@ -1,4 +1,4 @@
-const ckmeans = require('../src/ckmeans');
+const ckmeans = require('../packages/ckmeans/src/ckmeans.js');
 const assert = require('assert');
 for (let i = 1; i < 6; i++) {
   const domain = [];
