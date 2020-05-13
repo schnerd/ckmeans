@@ -29,17 +29,19 @@
  * PERFORMANCE OF THIS SOFTWARE.
  */
 
-function numericSort (array) {
-  return array
-    // ensure the array is not changed in-place
-    .slice()
-    // comparator function that treats input as numeric
-    .sort(function (a, b) {
-      return a - b;
-    });
+function numericSort(array) {
+  return (
+    array
+      // ensure the array is not changed in-place
+      .slice()
+      // comparator function that treats input as numeric
+      .sort(function (a, b) {
+        return a - b;
+      })
+  );
 }
 
-function uniqueCountSorted (input) {
+function uniqueCountSorted(input) {
   var uniqueValueCount = 0;
   var lastSeenValue;
   for (var i = 0; i < input.length; i++) {
@@ -51,7 +53,7 @@ function uniqueCountSorted (input) {
   return uniqueValueCount;
 }
 
-function makeMatrix (columns, rows) {
+function makeMatrix(columns, rows) {
   var matrix = [];
   for (var i = 0; i < columns; i++) {
     var column = [];
@@ -63,18 +65,18 @@ function makeMatrix (columns, rows) {
   return matrix;
 }
 
-function ssq (j, i, sumX, sumXsq) {
+function ssq(j, i, sumX, sumXsq) {
   var sji; // s(j, i)
   if (j > 0) {
     var muji = (sumX[i] - sumX[j - 1]) / (i - j + 1); // mu(j, i)
     sji = sumXsq[i] - sumXsq[j - 1] - (i - j + 1) * muji * muji;
   } else {
-    sji = sumXsq[i] - sumX[i] * sumX[i] / (i + 1);
+    sji = sumXsq[i] - (sumX[i] * sumX[i]) / (i + 1);
   }
   return sji < 0 ? 0 : sji;
 }
 
-function fillMatrixColumn (imin, imax, column, matrix, backtrackMatrix, sumX, sumXsq) {
+function fillMatrixColumn(imin, imax, column, matrix, backtrackMatrix, sumX, sumXsq) {
   if (imin > imax) {
     return;
   }
@@ -135,7 +137,7 @@ function fillMatrixColumn (imin, imax, column, matrix, backtrackMatrix, sumX, su
   fillMatrixColumn(i + 1, imax, column, matrix, backtrackMatrix, sumX, sumXsq);
 }
 
-function fillMatrices (data, matrix, backtrackMatrix) {
+function fillMatrices(data, matrix, backtrackMatrix) {
   var nValues = matrix[0].length;
   var sumX = new Array(nValues);
   var sumXsq = new Array(nValues);
@@ -210,7 +212,7 @@ function fillMatrices (data, matrix, backtrackMatrix) {
  * // The input, clustered into groups of similar numbers.
  * //= [[-1, -1, -1, -1], [2, 2, 2], [4, 5, 6]]);
  */
-function ckmeans (data, nClusters) {
+function ckmeans(data, nClusters) {
   if (nClusters > data.length) {
     throw new Error('Cannot generate more classes than there are data values');
   }
