@@ -68,7 +68,7 @@ void fillMatrixColumn(size_t imin, size_t imax, size_t column, size_t nColumns, 
     jlow = max_t(jlow, backtrackMatrix[(column -1)* nRows + i]);
 
     size_t jhigh = i - 1;
-    if (imax < nColumns - 1) {
+    if (imax < nRows - 1) {
         jhigh = min_t(jhigh, backtrackMatrix[column * nRows + imax + 1]);
     }
 
