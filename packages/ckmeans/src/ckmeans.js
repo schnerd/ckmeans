@@ -226,7 +226,7 @@ function ckmeans(data, nClusters) {
   // if all of the input values are identical, there's one cluster
   // with all of the input in it.
   if (uniqueCount === 1) {
-    return [sorted];
+    return [sorted[0]];
   }
   nClusters = Math.min(uniqueCount, nClusters);
 
