@@ -96,7 +96,7 @@ function fillMatrixColumn(imin, imax, column, matrix, backtrackMatrix, sumX, sum
   jlow = Math.max(jlow, backtrackMatrix[column - 1][i] || 0);
 
   var jhigh = i - 1; // the upper end for j
-  if (imax < matrix.length - 1) {
+  if (imax < matrix[0].length - 1) {
     jhigh = Math.min(jhigh, backtrackMatrix[column][imax + 1] || 0);
   }
 
